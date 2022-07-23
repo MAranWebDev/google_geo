@@ -61,7 +61,8 @@ const getMapByAddress = () => {
     arrNumber.push([streetNumber]);
     arrLink.push([link]);
 
-    // console.log(JSON.stringify(data, null, 4))
+    Utilities.sleep(1000);
+    // console.log(JSON.stringify(data, null, 4));
   }
 
   fillCell("B2", arrAddress);

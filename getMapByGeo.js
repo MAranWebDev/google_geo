@@ -24,7 +24,8 @@ const getMapByGeo = () => {
     sheet.getRange(range).offset(0, 0, arr.length).setValues(arr);
 
   for (let i = 1; i < cells.length; i++) {
-    const data = Maps.newGeocoder().reverseGeocode(cells[i][0],cells[i][1]).results[0];
+    const data = Maps.newGeocoder().reverseGeocode(cells[i][0], cells[i][1])
+      .results[0];
     let address,
       lat,
       lng,
@@ -61,7 +62,8 @@ const getMapByGeo = () => {
     arrNumber.push([streetNumber]);
     arrLink.push([link]);
 
-    console.log(JSON.stringify(data, null, 4))
+    Utilities.sleep(1000);
+    // console.log(JSON.stringify(data, null, 4));
   }
 
   fillCell("C2", arrAddress);
